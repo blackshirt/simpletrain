@@ -1,0 +1,382 @@
+fieldset {
+  margin: 10px;
+  padding: 0 10px 10px;
+  border: 1px solid #666;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #666;
+  padding-top: 10px;
+  
+}
+
+legend {
+  padding: 2px 4px;
+  
+  width:auto; 
+  border-bottom:none;
+  border-radius: 5px;
+  margin-bottom: 10;
+}
+
+fieldset > legend {
+  float: left;
+  margin-top: -20px;
+}
+fieldset > legend + * {
+  clear: both;
+}
+
+@input-success: rgba(0,32,132,0.8);
+@input-underline-color: rgba(123,321,312,0.8);
+
+.form-group.is-focused .form-control {
+    background-image: linear-gradient(@input-success, @input-success), linear-gradient(@input-underline-color, @input-underline-color);
+}
+
+.vresize {
+  resize: vertical;  
+}  
+
+
+
+@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+body {
+    padding: 60px 0px;
+    background-color: rgb(f3, 3f, e4);
+}
+
+.event-list {
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+.event-list > li {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px rgb(51, 51, 51);
+    box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.7);
+    padding: 0px;
+    margin: 0px 0px 20px;
+}
+.event-list > li > time {
+    display: inline-block;
+    width: 100%;
+    color: rgb(200, 155, 005);
+    background-color: rgb(197, 44, 102);
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.event-list > li:nth-child(even) > time {
+    background-color: rgb(160, 82, 167);
+}
+.event-list > li > time > span {
+    display: none;
+}
+.event-list > li > time > .day {
+    display: block;
+    font-size: 36pt;
+    font-weight: 100;
+    line-height: 1;
+}
+.event-list > li time > .month {
+    display: block;
+    font-size: 20pt;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.event-list > li time > .year {
+    display: block;
+    font-size: 20pt;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.event-list > li > img {
+    width: 100%;
+}
+.event-list > li > .info {
+    padding-top: 5px;
+    text-align: center;
+}
+.event-list > li > .info > .title {
+    font-size: 17pt;
+    font-weight: 700;
+    margin: 0px;
+}
+.event-list > li > .info > .desc {
+    font-size: 13pt;
+    font-weight: 300;
+    margin: 0px;
+}
+.event-list > li > .info > ul,
+.event-list > li > .social > ul {
+    display: table;
+    list-style: none;
+    margin: 10px 0px 0px;
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+}
+.event-list > li > .social > ul {
+    margin: 0px;
+}
+.event-list > li > .info > ul > li,
+.event-list > li > .social > ul > li {
+    display: table-cell;
+    cursor: pointer;
+    color: rgb(30, 30, 30);
+    font-size: 11pt;
+    font-weight: 300;
+padding: 3px 0px;
+}
+.event-list > li > .info > ul > li > a {
+    display: block;
+    width: 100%;
+    color: rgb(30, 30, 30);
+    text-decoration: none;
+}
+.event-list > li > .social > ul > li {
+    padding: 0px;
+}
+.event-list > li > .social > ul > li > a {
+    padding: 3px 0px;
+}
+.event-list > li > .info > ul > li:hover,
+.event-list > li > .social > ul > li:hover {
+    color: rgb(30, 30, 30);
+    background-color: rgb(200, 200, 200);
+}
+.edit a,
+.detail a,
+.delete a {
+    display: block;
+    width: 100%;
+    color: rgb(75, 110, 168) !important;
+}
+.detail a {
+    color: rgb(79, 213, 248) !important;
+}
+.delete a {
+    color: rgb(221, 75, 57) !important;
+}
+.edit:hover a {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(75, 110, 168) !important;
+}
+.detail:hover a {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(79, 213, 248) !important;
+}
+.delete:hover a {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(221, 75, 57) !important;
+}
+
+@media (min-width: 768px) {
+    .event-list > li {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 120px;
+        padding: 0px;
+    }
+    .event-list > li > time,
+    .event-list > li > img  {
+        display: inline-block;
+    }
+    .event-list > li > time,
+    .event-list > li > img {
+        width: 120px;
+        float: left;
+    }
+    .event-list > li > .info {
+        background-color: rgb(245, 245, 245);
+        overflow: hidden;
+    }
+    .event-list > li > time,
+    .event-list > li > img {
+        width: 220px;
+        height: 120px;
+        padding: 0px;
+        margin: 0px;
+    }
+    .event-list > li > .info {
+        position: relative;
+        height: 120px;
+        text-align: left;
+        padding-right: 40px;
+    }
+    .event-list > li > .info > .title,
+    .event-list > li > .info > .desc {
+        padding: 0px 10px;
+    }
+    .event-list > li > .info > ul {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+    }
+    .event-list > li > .social {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        display: block;
+        width: 40px;
+    }
+    .event-list > li > .social > ul {
+        border-left: 1px solid rgb(230, 230, 230);
+    }
+    .event-list > li > .social > ul > li {
+        display: block;
+        padding: 0px;
+    }
+    .event-list > li > .social > ul > li > a {
+        display: block;
+        width: 40px;
+        padding: 10px 0px 9px;
+    }
+}
+
+.container .container-recents{
+    padding: 100px;
+}
+
+
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Anton|Maven+Pro:500,700);
+
+body {
+    font-family: 'Maven Pro', sans-serif;
+}
+
+h2 {
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+}
+
+
+.animate {
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.nav-controller {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 5px 6px 1px;
+    border: 5px solid rgb(51, 51, 51);
+    color: rgb(51, 51, 51);
+    border-radius: 25px;
+    font-size: 12pt;
+    cursor: pointer;
+    z-index: 300;
+}
+
+nav ~ .nav-controller > .controller-open {
+    display: inline-block;
+}
+
+nav ~ .nav-controller > .controller-close {
+    display: none;
+}
+nav.focus ~ .nav-controller > .controller-open {
+    display: none;
+}
+
+nav.focus ~ .nav-controller > .controller-close {
+    display: inline-block;
+}
+
+nav {
+    position: fixed;
+    top: 0px;
+    right: -100%;
+    padding-top: 65px;
+    padding-bottom: 15px;
+    height: 100%;
+    max-width: 200px;
+    text-align: right;
+    background-color: rgb(255, 255, 255);
+    box-shadow: -3px 0px 3px 0px rgba(160, 160, 160, 0.30);
+    z-index: 100;    
+    overflow: auto;
+}
+
+nav.focus {
+    right: 0px;
+}
+
+nav > .divider {
+    content: '';
+    border-bottom: 1px solid rgb(230, 230, 230);
+    max-height: 1px;
+    overflow: hidden;
+    margin: 15px 0px;
+}
+
+nav > h4,
+nav > p,
+nav > ul {
+    padding: 0px 10px;
+}
+
+nav > h4 {
+    font-family: 'Anton', sans-serif;
+}
+
+nav > ul {
+    list-style: none;
+}
+nav > ul > li {
+    margin: 5px 0px;   
+}
+nav > ul > li > a {
+    color: rgb(190, 190, 190);   
+}
+nav > ul > li > a:hover {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+}
+
+
+### button circle    
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}	
+	
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 19px 19px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+
+
+
