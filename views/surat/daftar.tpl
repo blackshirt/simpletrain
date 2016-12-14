@@ -1,6 +1,7 @@
-% rebase('base.tpl', title='Page Title')
+% rebase('base1.tpl', title='Page Title')
 
-<div class="container">
+
+<div class="container-fluid">
     <div class="well">
         <ul class="event-list">
             % for item in surat:
@@ -32,6 +33,7 @@
     </div>
 
 </div>
+
     
    
     

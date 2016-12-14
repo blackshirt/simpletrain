@@ -8,7 +8,6 @@
 </head>
 <body>
 
-
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -91,7 +90,8 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-						Your Content
+						<!-- content -->
+                            {{!base}}
                     </div>
                 </div>
             </div>
@@ -100,6 +100,8 @@
     </div>
 </div>
 <!-- /#wrapper -->
+
+
 
 
 
@@ -118,13 +120,11 @@ $(function() {
     }).on('mouseout', function(event) {
         $('nav').removeClass('focus');
     });
-    $("#menu-toggle").click(function(e) {
+     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
 })
-
-
 </script>
 </body>
 </html>
