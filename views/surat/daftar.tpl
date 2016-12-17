@@ -1,7 +1,4 @@
 % rebase('base1.tpl', title='Page Title')
-
-
-
 <div class="well">
     <ul class="event-list">
         % for item in surat:
