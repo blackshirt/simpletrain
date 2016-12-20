@@ -1,13 +1,56 @@
+'''
+Database Models
+
+Models defined here
+===================
+
+1. User
+2. Employee
+3. Workplace
+4. Training
+5. Letter
+6. TaskLearning
+
+'''
+
 import os
 from datetime import date, datetime
 
 from pony.orm import *
+
+__all__ = ['db', 'User', 'Pegawai']
 
 db = Database()
 
 path = os.path.abspath(__file__)
 dir_path = os.path.dirname(path)
 support = os.path.join(dir_path, "support")
+
+
+class User(db.Entity):
+    nama = Required(str)
+    email = Optional(str)
+    password = Optional(str)
+
+
+class Employee(User):
+    nip = Required(str)
+
+
+class Workplace(db.Entity):
+    nama = Required(str)
+
+
+class Training(db.Entity):
+    title = Required(str)
+
+
+class Letter(db.Entity):
+    perihal = Required(str)
+
+
+class TaskLearning(db.Entity):
+    perihal = Required(str)
 
 
 class Instansi(db.Entity):
