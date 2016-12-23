@@ -9,9 +9,7 @@ from models import db, User, Pegawai, Training
 
 @user_groups_getter(User)
 def user_groups(user):
-    if user.admin:
-        return ['admin', 'user']
-    return ['user']
+    return user.type
 
 
 @user_roles_getter(User, Training)
