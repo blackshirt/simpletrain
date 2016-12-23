@@ -26,7 +26,7 @@ db = Database()
 
 path = os.path.abspath(__file__)
 dir_path = os.path.dirname(path)
-support = os.path.join(dir_path, "support")
+support_dir = os.path.join(dir_path, "support")
 
 
 class User(db.Entity):
@@ -34,6 +34,7 @@ class User(db.Entity):
     email = Optional(str)
     password = Optional(str)
     dob = Optional(date)
+    pob = Optional(str)
 
 
 class Employee(User):
@@ -43,11 +44,12 @@ class Employee(User):
 class Workplace(db.Entity):
     name = Required(str)
 
-class SenderMixins(User, Workplace):
+
+class SendRecvMixin(User, Workplace):
     pass
 
 
-class Sender(SenderMixins):
+class SenderReceiver(SendRecvMixin):
     letters = Set("Letter")
 
 
@@ -58,8 +60,10 @@ class Training(db.Entity):
 class Letter(db.Entity):
     about = Required(str)
     dol = Optional(date)
-    sender = Optional(Sender)
+    sender = Optional(SenderReceiver)
+    receiver = Optional(SenderReceiver)
     inputed_at = Optional(datetime, default=datetime.now)
+    last_updated = Optional(datetime, default=datetime.now)
 
 
 class LearningAssignment(db.Entity):
