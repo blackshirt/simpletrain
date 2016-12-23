@@ -53,23 +53,26 @@ class SendRecvMixin(User, Workplace):
     pass
 
 
-class SenderReceiver(SendRecvMixin):
-    sent_letters = Set("Letter", reverse="sender")
-    rcvd_letters = Set("Letter", reverse="receiver")
+class Sender(SendRecvMixin):
+    letter = Set("Letter")
 
 
-class Training(db.Entity):
-    title = Required(str)
+class Receiver(SendRecvMixin):
+    letter = Set("Letter")
 
 
 class Letter(db.Entity):
     about = Required(str)
     date = Optional(date)
     number = Optional(str)
-    sender = Optional(SenderReceiver, reverse="sent_letters")
-    receiver = Set(SenderReceiver, reverse="rcvd_letters")
+    sender = Optional(Sender)
+    receiver = Set(Receiver)
     inputed_at = Optional(datetime, default=datetime.now)
     last_updated = Optional(datetime, default=datetime.now)
+
+
+class Training(db.Entity):
+    title = Required(str)
 
 
 class LearningAssignment(db.Entity):

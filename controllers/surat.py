@@ -8,6 +8,6 @@ def all_letters():
     return db.to_json(letters)
 
 
-def letter(*args, **kwargs):
-    letter = Letter.get(*args, **kwargs)
+def letter(**kwargs):
+    letter = Letter.get(**kwargs)
     return db.to_json(letter)

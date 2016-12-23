@@ -21,11 +21,6 @@ def setup_route(application):
     application.route('/static/<filename:path>', callback=send_static)
     application.route('/', callback=index)
     application.route('/favicon.ico', 'GET', callback=favicon)
-    application.route('/surat', 'GET', callback=surat.semua_surat)
-    application.route('/surat/new', ['GET', 'POST'], callback=surat.surat_baru)
-    application.route('/surat/<id>', 'GET', callback=surat.info_surat)
-    application.route('/surat/<id>/edit', 'GET', callback=surat.edit_surat)
-    application.route('/surat/<id>/delete', 'GET', callback=surat.delete_surat)
 
 
 def send_static(filename):
