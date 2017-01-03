@@ -1,4 +1,4 @@
-% rebase('base1.tpl', title='Page Title')
+% rebase('layout.tpl', title='Page Title')
 
 
 

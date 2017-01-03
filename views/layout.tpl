@@ -8,35 +8,36 @@
 </head>
 <body>
 
-<nav class="w3-sidenav w3-card-16 w3-animate-left" style="display:none" id="sideNav">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large">&times;</a>
-  <a href="#"><i class="fa fa-home w3-xlarge"> Home </i></a>
-  <a href="#"><i class="fa fa-envelope w3-xlarge"> Training </i></a>
-  <a href="#"><i class="fa fa-home w3-xlarge"> Home </i></a>
-  <a href="#"><i class="fa fa-envelope 3-xxlarge"> Training </i></a>
-  <a href="#"><i class="fa fa-home w3-xlarge"> Home </i></a>
-  <a href="#"><i class="fa fa-envelope w3-xlarge"> Training </i></a>
+<nav class="w3-sidenav w3-card-16 w3-animate-left w3-black" style="display:none" id="sideNav">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large"><i class="fa fa-close"></i></a>
+  <a href="#" class="w3-hover-indigo">Home</a>
+  <a href="#" class="w3-hover-indigo">Training</a>
+  <a href="#" class="w3-hover-indigo">Home</a>
+  <a href="#" class="w3-hover-indigo">Training</a>
+  <a href="#" class="w3-hover-indigo">Home</a>
+  <a href="#" class="w3-hover-indigo">Training</a>
 </nav>
 
 <div id="main">
 
-<header class="w3-container w3-indigo">
-  <span class="w3-opennav w3-xlarge" onclick="w3_open()" id="openNav">&#9776;</span>
-  <h1 class="w3-jumbo">Header</h1>
-</header>
+    <header class="w3-container w3-black">
+      <span class="w3-opennav w3-xlarge" onclick="w3_open()" id="openNav"><i class="fa fa-bars"></i></span>
+      <h1 class="w3-jumbo">Header</h1>
+    </header>
 
+    <!-- content -->
+    {{!base}}
 
-<div class="w3-container">
-  <h2>London</h2>
-  <p>London is the most populous city in the United Kingdom,
-  with a metropolitan area of over 9 million inhabitants.</p>
-</div>
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-32 w3-center w3-black w3-xlarge w3-bottom">
+      <a href="#"><i class="fa fa-facebook-official"></i></a>
+      <a href="#"><i class="fa fa-pinterest-p"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-flickr"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <p class="w3-medium">Powered by w3.css</p>
+    </footer>
 
-
-
-<footer class="w3-container w3-indigo">
-footer
-</footer>
 </div>
 
 <script type="text/javascript">
