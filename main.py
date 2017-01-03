@@ -21,6 +21,7 @@ def setup_route(application):
     application.route('/static/<filename:path>', callback=send_static)
     application.route('/', callback=index)
     application.route('/favicon.ico', 'GET', callback=favicon)
+    application.route('/surat', 'GET', callback=surat)
 
 
 def send_static(filename):
@@ -33,6 +34,9 @@ def favicon():
 
 def index():
     return template('index')
+
+def surat():
+    return template('surat/daftar')
 
 
 if __name__ == "__main__":
