@@ -3,7 +3,7 @@ import bottle
 from bottle import Bottle, template, static_file
 from pony.orm.integration.bottle_plugin import PonyPlugin
 
-from controllers import surat
+from controllers import surat, letters
 
 path = os.path.abspath(__file__)
 dir_path = os.path.dirname(path)
@@ -21,7 +21,8 @@ def setup_route(application):
     application.route('/static/<filename:path>', callback=send_static)
     application.route('/', callback=index)
     application.route('/favicon.ico', 'GET', callback=favicon)
-    application.route('/surat', 'GET', callback=surat)
+    application.route('/letter', 'GET', callback=letters.letter)
+    application.route('/letter/add', ['GET', 'POST'], callback=letters.add_letter)
 
 
 def send_static(filename):
@@ -35,8 +36,6 @@ def favicon():
 def index():
     return template('index')
 
-def surat():
-    return template('surat/daftar')
 
 
 if __name__ == "__main__":
